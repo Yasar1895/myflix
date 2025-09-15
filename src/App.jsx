@@ -13,6 +13,8 @@ function App() {
       <Row title="Horror" movies={movies.filter(m => m.genre === 'Horror')} />
       <Row title="Action" movies={movies.filter(m => m.genre === 'Action')} />
       <Row title="Adventure" movies={movies.filter(m => m.genre === 'Adventure')} />
+      <Row title="Sci-Fi" movies={movies.filter(m => m.genre === 'Sci-Fi')} />
+      <Row title="Thriller" movies={movies.filter(m => m.genre === 'Thriller')} />
     </div>
   )
 }
