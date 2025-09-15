@@ -10,7 +10,7 @@ export default function Row({ title, movies }) {
             <img
               src={movie.image}
               alt={movie.title}
-              style={{ width: '150px', height: '200px', objectFit: 'cover' }}
+              style={{ width: '150px', height: '220px', objectFit: 'cover', display: 'block' }}
             />
             <div style={{ padding: '5px', fontSize: '12px' }}>
               <h4>{movie.title}</h4>
