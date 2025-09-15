@@ -5,60 +5,59 @@ import Row from './components/Row';
 import Footer from './components/Footer';
 
 export default function App() {
-  // Movie data with images, description, genre, and rating
+  // Movie data
   const allMovies = [
     {
-      title: 'Inception',
-      genre: 'Sci-Fi',
+      title: 'Harry Potter and the Sorcerer\'s Stone',
+      genre: 'Fantasy',
+      rating: 7.6,
+      description: 'A young wizard discovers his magical heritage and attends Hogwarts School.',
+      image: 'https://m.media-amazon.com/images/I/81YOuOGFCJL._AC_SY679_.jpg'
+    },
+    {
+      title: 'The Lord of the Rings: The Fellowship of the Ring',
+      genre: 'Fantasy',
       rating: 8.8,
-      description: 'A mind-bending thriller.',
-      image: 'https://m.media-amazon.com/images/I/51kH+ogGqDL._AC_.jpg',
+      description: 'A hobbit sets out on a quest to destroy a powerful ring.',
+      image: 'https://m.media-amazon.com/images/I/51Qvs9i5a%2BL._AC_.jpg'
     },
     {
-      title: 'Avengers',
-      genre: 'Action',
-      rating: 8.5,
-      description: 'Superheroes save the world.',
-      image: 'https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SY679_.jpg',
+      title: 'Wheel of Time',
+      genre: 'Fantasy',
+      rating: 7.5,
+      description: 'Epic tale of magic, prophecy, and adventure spanning continents.',
+      image: 'https://m.media-amazon.com/images/I/71mSgbn0sJL._AC_SY679_.jpg'
     },
     {
-      title: 'Titanic',
-      genre: 'Romance',
-      rating: 7.8,
-      description: 'A tragic love story.',
-      image: 'https://m.media-amazon.com/images/I/71tA3BkP1tL._AC_SY679_.jpg',
+      title: 'The Conjuring',
+      genre: 'Horror',
+      rating: 7.5,
+      description: 'Paranormal investigators help a family terrorized by a dark presence.',
+      image: 'https://m.media-amazon.com/images/I/71g5v2RlG8L._AC_SY679_.jpg'
     },
     {
-      title: 'Interstellar',
-      genre: 'Sci-Fi',
-      rating: 8.6,
-      description: 'Journey through space and time.',
-      image: 'https://m.media-amazon.com/images/I/71n58OQmEhL._AC_SY679_.jpg',
+      title: 'The Nun',
+      genre: 'Horror',
+      rating: 5.3,
+      description: 'A priest and a nun investigate a haunted abbey.',
+      image: 'https://m.media-amazon.com/images/I/71h3er1xIjL._AC_SY679_.jpg'
     },
     {
-      title: 'Joker',
-      genre: 'Drama',
-      rating: 8.4,
-      description: 'The origin of the Joker.',
-      image: 'https://m.media-amazon.com/images/I/71xU2mox1nL._AC_SY679_.jpg',
-    },
-    {
-      title: 'The Dark Knight',
-      genre: 'Action',
-      rating: 9.0,
-      description: 'Batman fights crime in Gotham.',
-      image: 'https://m.media-amazon.com/images/I/51EbJjlO9XL._AC_.jpg',
-    },
+      title: 'The Conjuring 2',
+      genre: 'Horror',
+      rating: 7.3,
+      description: 'The paranormal investigators face a dark spirit in London.',
+      image: 'https://m.media-amazon.com/images/I/71y-0A3dz7L._AC_SY679_.jpg'
+    }
   ];
 
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Filter movies based on search input
+  // Filter movies based on search
   const filteredMovies = allMovies.filter(movie =>
     movie.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  // Show first filtered movie as Banner; fallback to first movie if none found
   const featuredMovie = filteredMovies[0] || allMovies[0];
 
   return (
