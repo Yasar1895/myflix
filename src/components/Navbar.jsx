@@ -16,7 +16,7 @@ export default function Navbar({ onSearch }) {
         placeholder="Search movies..."
         value={query}
         onChange={handleChange}
-        style={{ padding: '5px 10px', borderRadius: '5px', border: 'none' }}
+        style={{ padding: '5px 10px', borderRadius: '5px', border: 'none', width: '200px' }}
       />
     </nav>
   );
