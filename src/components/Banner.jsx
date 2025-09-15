@@ -17,9 +17,9 @@ export default function Banner({ movie }) {
         padding: '20px',
       }}
     >
-      <h2>{movie.title}</h2>
-      <p>{movie.description}</p>
-      <p>Rating: {movie.rating} ⭐</p>
+      <h2 style={{ textShadow: '2px 2px 4px #000' }}>{movie.title}</h2>
+      <p style={{ textShadow: '1px 1px 3px #000' }}>{movie.description}</p>
+      <p style={{ textShadow: '1px 1px 3px #000' }}>Rating: {movie.rating} ⭐</p>
     </header>
   );
 }
