@@ -5,48 +5,49 @@ import Row from './components/Row';
 import Footer from './components/Footer';
 
 export default function App() {
+  // Movie data with images, plot, genre, rating
   const allMovies = [
     {
-      title: "Harry Potter and the Sorcerer's Stone",
+      title: "Spider-Man: No Way Home",
+      genre: "Action",
+      rating: 8.3,
+      description: "Peter Parker faces multiverse villains as he tries to fix his identity crisis caused by Doctor Strange.",
+      image: "https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg"
+    },
+    {
+      title: "Avengers: Endgame",
+      genre: "Action",
+      rating: 8.4,
+      description: "The Avengers work together to reverse the damage caused by Thanos and save the universe.",
+      image: "https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg"
+    },
+    {
+      title: "The Batman",
+      genre: "Action",
+      rating: 8.0,
+      description: "Batman investigates corruption in Gotham while facing the serial killer Riddler.",
+      image: "https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg"
+    },
+    {
+      title: "Jurassic World: Dominion",
+      genre: "Adventure",
+      rating: 6.7,
+      description: "Humans and dinosaurs must coexist after dinosaurs are freed into the modern world.",
+      image: "https://image.tmdb.org/t/p/w500/kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg"
+    },
+    {
+      title: "Doctor Strange in the Multiverse of Madness",
       genre: "Fantasy",
-      rating: 7.6,
-      description: "Harry discovers he is a wizard on his 11th birthday. He attends Hogwarts School of Witchcraft and Wizardry, makes friends, and uncovers secrets about his past.",
-      image: "https://upload.wikimedia.org/wikipedia/en/6/6b/Harry_Potter_and_the_Philosopher%27s_Stone_Book_Cover.jpg"
+      rating: 7.2,
+      description: "Doctor Strange explores the multiverse and faces dark magical forces threatening reality.",
+      image: "https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg"
     },
     {
-      title: "The Lord of the Rings: The Fellowship of the Ring",
-      genre: "Fantasy",
-      rating: 8.8,
-      description: "Frodo Baggins embarks on a journey to destroy the One Ring. Along the way, he is joined by a fellowship to fight the forces of Sauron.",
-      image: "https://upload.wikimedia.org/wikipedia/en/0/0c/The_Fellowship_of_the_Ring.jpg"
-    },
-    {
-      title: "Wheel of Time",
-      genre: "Fantasy",
-      rating: 7.5,
-      description: "A young man discovers he may be the prophesied Dragon Reborn. He and his friends must navigate a world of magic, prophecy, and war.",
-      image: "https://upload.wikimedia.org/wikipedia/en/3/3f/Wheel_of_Time_Season_1_poster.jpg"
-    },
-    {
-      title: "The Conjuring",
-      genre: "Horror",
-      rating: 7.5,
-      description: "Paranormal investigators Ed and Lorraine Warren work to help a family terrorized by a dark presence in their farmhouse.",
-      image: "https://upload.wikimedia.org/wikipedia/en/1/1d/Conjuring_poster.jpg"
-    },
-    {
-      title: "The Nun",
-      genre: "Horror",
-      rating: 5.3,
-      description: "A priest and a novitiate investigate a haunted abbey in Romania and confront a demonic entity known as Valak.",
-      image: "https://upload.wikimedia.org/wikipedia/en/e/e3/The_Nun_poster.jpg"
-    },
-    {
-      title: "The Conjuring 2",
-      genre: "Horror",
-      rating: 7.3,
-      description: "The Warrens travel to London to help a family plagued by paranormal activity in their council house.",
-      image: "https://upload.wikimedia.org/wikipedia/en/2/25/The_Conjuring_2_poster.jpg"
+      title: "Guardians of the Galaxy Vol. 3",
+      genre: "Action",
+      rating: 8.1,
+      description: "The Guardians embark on a mission to protect one of their own, uncovering secrets of Rocket’s past.",
+      image: "https://image.tmdb.org/t/p/w500/yl66d2t0nQ5aPnygqv6tBtjJr8B.jpg"
     }
   ];
 
@@ -59,6 +60,7 @@ export default function App() {
     movie.description.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  // Show first filtered movie in Banner
   const featuredMovie = filteredMovies[0] || allMovies[0];
 
   return (
