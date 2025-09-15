@@ -1,23 +1,16 @@
-import React, { useState } from 'react';
+import React from "react";
+import "./Navbar.css";
 
-export default function Navbar({ onSearch }) {
-  const [query, setQuery] = useState('');
-
-  const handleChange = (e) => {
-    setQuery(e.target.value);
-    onSearch(e.target.value);
-  };
-
+export default function Navbar() {
   return (
-    <nav style={{ padding: '20px', background: '#111', color: 'white', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-      <h1>Netflix Clone</h1>
-      <input
-        type="text"
-        placeholder="Search movies..."
-        value={query}
-        onChange={handleChange}
-        style={{ padding: '5px 10px', borderRadius: '5px', border: 'none', width: '200px' }}
-      />
+    <nav className="navbar">
+      <h1 className="logo">NETFLIX</h1>
+      <ul>
+        <li>Home</li>
+        <li>Movies</li>
+        <li>TV Shows</li>
+        <li>My List</li>
+      </ul>
     </nav>
   );
 }
