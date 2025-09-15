@@ -9,8 +9,10 @@ function App() {
     <div className="app">
       <Navbar />
       <Hero movie={movies[0]} />
-      <Row title="Trending Now" movies={movies} />
-      <Row title="Top Picks" movies={movies.slice(0, 4)} />
+      <Row title="Fantasy" movies={movies.filter(m => m.genre === 'Fantasy')} />
+      <Row title="Horror" movies={movies.filter(m => m.genre === 'Horror')} />
+      <Row title="Action" movies={movies.filter(m => m.genre === 'Action')} />
+      <Row title="Adventure" movies={movies.filter(m => m.genre === 'Adventure')} />
     </div>
   )
 }
