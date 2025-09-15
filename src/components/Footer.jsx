@@ -1,9 +1,10 @@
-import React from 'react';
+import React from "react";
+import "./Footer.css";
 
 export default function Footer() {
   return (
-    <footer style={{ padding: '20px', background: '#111', color: 'white', textAlign: 'center' }}>
-      <p>© 2025 Netflix Clone</p>
+    <footer className="footer">
+      <p>Netflix Clone © 2025 | Made with ❤️</p>
     </footer>
   );
 }
