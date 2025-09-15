@@ -5,7 +5,7 @@ export default function Navbar({ onSearch }) {
 
   const handleChange = (e) => {
     setQuery(e.target.value);
-    onSearch(e.target.value); // send search query to App
+    onSearch(e.target.value);
   };
 
   return (
